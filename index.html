@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>venkateswarlu portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+}
+body{
+  background-color: rgb(7, 7, 7);
+}
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+#navbar{
+  position: fixed;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  height: 10vh;
+}
+#logo{
+  width: fit-content;
+}
+ul{
+  display: flex;
+  
+}
+li{
+  list-style: none;
+  margin: 25px;
+  
+}
+#navbar ul li a{
+  font-size: 15px;
+  font-weight: 500;
+  transition: .5s;
+}
+#navbar ul li:hover a, 
+#navbar ul li#active a
+{
+  color: rgb(17, 191, 40);
+}
+.home{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 60px 9% 0;
+  color: white;
+}
+
+.info h1{
+  font-size: 35px;
+}
+.info h2{
+  font-size: 22px;
+  margin-top: 10px;
+}
+.info p{
+  margin: 10px;
+}
+.info .btn-sci{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: greenyellow;
+  border: 2px solid greenyellow;
+  border-radius: 40px;
+  box-shadow: 0 0 10px greenyellow;
+  font-size: 10px;
+  font-weight: 600;
+  color: black;
+  transition: .5s;
+}
+.btn:hover{
+  background: transparent;
+  color: greenyellow;
+  box-shadow: none;
+}
+.info .btn-sci .sci{
+  margin-left: 20px;
+}
+.info .btn-sci .sci a{
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid greenyellow;
+  border-radius: 50%;
+  font-size: 10px;
+  color: greenyellow;
+  margin: 0 8px;
+
+}
+.info .btn-sci .sci a:hover{
+  background: greenyellow;
+  box-shadow: 0 0 10px greenyellow;
+  color: black;
+}
+.home-img .img-box{
+  position: relative;
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+.home-img .img-box::before,
+.home-img .img-box::after {
+  content: '';
+  position: absolute;
+  width:  500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, greenyellow);
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.home-img .img-box .img-item{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgb(21, 21, 21);
+}
+.home-img .img-box .img-item img{
+  position: absolute;
+  top: 10px;
+  display: block;
+  object-fit: cover;
+  width: 85%;
+  mix-blend-mode: lighten;
+}
+.about,.skill{
+  display: flex;
+  align-items: center;
+  
+  padding: 60px 9% 0;
+  color: white;
+
+}
+.about .about-info p{
+  text-align: left;
+  font-size: 12px;
+}
+.skill{
+ padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill  img{
+  
+  top: 10px;
+  display: inline-block;
+  height: 100px;
+ width: 150px;
+  
+}/* About Section */
+.about, .skills, .projects, .contact {
+  padding: 80px 10%;
+  text-align: center;
+  color: aliceblue;
+}
+
+/* Skills */
+.skill-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: hi;
+  padding: 10px;
+}
+
+.skill-card {
+  background: rgb(13, 13, 13);
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  transition: .5s;display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid greenyellow;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(81, 240, 38);
+  transition: .5s;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  background: yellowgreen;
+  color: rgb(165, 248, 40);
+  box-shadow: none;
+}
+
+.skill-card img {
+  width: 60px;
+  height: auto;
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #001f4d;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact form input, .contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+#navbar{
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 25px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.8);
+      height: 10vh;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      list-style: none;
+      margin: 0 20px;
+    }
+    #navbar ul li a{
+      font-size: 16px;
+      font-weight: 600;
+      transition: .5s;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+    #navbar ul li:hover a, #navbar ul li#active a {
+      color: rgb(17, 191, 40);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .home{
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      padding: 80px 9% 0;
+      color: white;
+    }
+    .info h1{
+      font-size: 40px;
+    }
+    .info h2{
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    .info p{
+      margin: 10px 0;
+    }
+    .btn{
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: greenyellow;
+      border: 2px solid greenyellow;
+      border-radius: 40px;
+      box-shadow: 0 0 10px greenyellow;
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+      transition: .5s;
+    }
+    .btn:hover{
+      background: transparent;
+      color: greenyellow;
+      box-shadow: none;
+    }
+    .education {
+      text-align: center;
+      padding: 60px 10%;
+    }
+    .education h1 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .education-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      color: #fff;
+    }
+    .education-card {
+      background: #040404;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid yellowgreen;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(105, 240, 87, 0.1);
+      width: 80%;
+    }
+    .education-card:hover {
+      transform: scale(1.05);
+      background: yellowgreen;
+      color: rgb(223, 219, 219);
+    }
+
+
+</style>
+</head>
+<body>
+  <nav id="navbar">
+   <a href=""></a>
+    <div id="menu-icon">
+      <i class='bx bx-menu'></i>
+    </div>
+      <ul>
+        <li id="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="home" id="home">
+  <div class="info">
+    <h1>Hi, I'm <span>Venkateswarlu</span></h1>
+      <h2>Frontend Developer</h2>
+      <p>Passionate about creating interactive, responsive, and user-friendly web applications.</p>
+   
+    <div class="btn-sci">
+      <a href="cv.pdf" download="Venkateswarlu_CV.pdf" class="btn">Download CV</a>
+      <div class="sci">
+        <a href="http://linkedin.com/in/pallala-venkateswarlu-690b75286"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.facebook.com/share/1B3EGVTJPu/?mibextid=wwXIfr"><i class='bx bxl-facebook'></i></a>
+        <a href="https://wa.me/+918919583531"><i class='bx bxl-whatsapp'></i></a>
+        <a href="mailto:venki44456@gmail.com"><i class='bx bxl-gmail'></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="home-img">
+    <div class="img-box">
+      <div class="img-item">
+        <img src="me.png" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-container">
+    
+    <div class="about-content">
+      <h1>About Me</h1>
+      <p>
+        I'm a <b>Frontend Developer</b> passionate about  React, and Web Development. I enjoy crafting modern, performance-optimized web applications.
+      </p>
+      <ul>
+        <li>💡 Creative Problem Solver</li>
+        <li>⚡ Strong Time Management</li>
+        <li>🎯 Passionate About Learning</li>
+      </ul>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  </div>
+</section>
+<section class="education" id="education">
+  <h1>Education</h1>
+  <div class="education-container">
+    <div class="education-card">
+      <h3>Bachelor of Science in Physics</h3>
+      <p>Krishna Chaithanya Degree College (2022)</p>
+      <p><b>GPA:</b> 8.67/10</p>
+    </div>
+    <div class="education-card">
+      <h3>Board of Intermediate Education - MPC</h3>
+      <p>PRR Junior College</p>
+      <p>CGPA: 8.5/10</p>
+    </div>
+    <div class="education-card">
+      <h3>State Board Of Secondary Education - SSC</h3>
+      <p>ZP Govt High School</p>
+      <p>GPA: 8.0/10</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <h1>Skills</h1>
+  <div class="skill-container">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <p>HTML5</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <p>CSS3</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <p>React</p>
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+      <p>Bootstrap</p>
+    </div>
+    
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <h1>Projects</h1>
+  <div class="project-container">
+    <div class="project-card">
+      <img src="project1.png" alt="Project 1">
+      <h3>Portfolio Website</h3>
+      <p>A sleek and modern portfolio built with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project-card">
+      <img src="project2.png" alt="Project 2">
+      <h3>Calculator</h3>
+      <p>A basic mathematical calculator.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h1>Contact Me</h1>
+  <form onsubmit="validateForm(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <div class="socials">
+    <a href="https://linkedin.com"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://github.com"><i class='bx bxl-github'></i></a>
+    <a href="https://twitter.com"><i class='bx bxl-twitter'></i></a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.getElementById("menu-icon");
+  const navList = document.querySelector("nav ul");
+
+  menuIcon.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+});
+function validateForm(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill out all fields.");
+    return false;
+  }
+
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    alert("Please enter a valid email.");
+    return false;
+  }
+
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
+  messages.push({ name, email, message });
+  localStorage.setItem("messages", JSON.stringify(messages));
+
+  alert("Thank you! Your message has been saved.");
+  document.querySelector("form").reset();
+}
+
+// Retrieve and display messages (Optional)
+function showMessages() {
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
+  console.log("Saved Messages:", messages);
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.getElementById("menu-icon");
+  const navList = document.querySelector("nav ul");
+  menuIcon.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+});
+
+</script>
+</body>
+</html>

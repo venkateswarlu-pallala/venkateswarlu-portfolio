@@ -197,6 +197,26 @@ document.addEventListener("DOMContentLoaded", () => {
     navList.classList.toggle("active");
   });
 });
+// Select all elements with class 'section'
+const sections = document.querySelectorAll('.section');
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add('visible');
+    } else {
+      section.classList.remove('visible');
+    }
+  });
+}
+
+// Run on scroll and on page load
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 </script>
 </body>

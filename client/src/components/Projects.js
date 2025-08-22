@@ -10,8 +10,8 @@ const projectsData = [
 image: portfolioImg,
 description: "A personal portfolio website showcasing projects, skills, and experience with a clean and responsive design.",
 tags: ["React", "Bootstrap", "JavaScript", "HTML", "CSS"],
-liveLink: "#",
-codeLink: "#"
+liveLink: "venkateswarlupallala-portfolio.netlify.app",
+
 
   },
   {
@@ -19,8 +19,8 @@ codeLink: "#"
     image: restaurantImg,
     description: "Developed a dynamic SPA for users to browse a menu, filter items, and place orders, with a server-side application to manage data.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Hooks"],
-    liveLink: "#", // <-- Replace with your actual live demo link
-    codeLink: "#"  // <-- Replace with your actual GitHub repo link
+    liveLink: "https://restaurant-venkateswarlu-pallalas-projects.vercel.app", 
+    
   }
 ];
 

@@ -1,6 +1,6 @@
 // --- ASSETS ---
 // Import your project images and resume PDF
-import ecommerceImg from '../assets/images/ecommerce.png';
+import portfolioImg from '../assets/images/ecommerce.png';
 import restaurantImg from '../assets/images/restaurant.png';
 import resumePdf from '../assets/files/PALLALA_VENKATESWARLU_Resume.pdf';
 
@@ -55,12 +55,13 @@ export const skillsData = {
 // --- PROJECTS DATA ---
 export const projectsData = [
   {
-    title: "Full-Stack E-commerce Website",
-    image: ecommerceImg,
-    description: "A feature-rich e-commerce platform with product browsing, a shopping cart, and secure user authentication using JWT.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
-    liveLink: "#",
-    codeLink: "#"
+    title: "Portfolio",
+image: portfolioImg,
+description: "A personal portfolio website showcasing projects, skills, and experience with a clean and responsive design.",
+tags: ["React", "Bootstrap", "JavaScript", "HTML", "CSS"],
+liveLink: "#",
+codeLink: "#"
+
   },
   {
     title: "Restaurant Menu Ordering App",

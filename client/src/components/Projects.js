@@ -1,17 +1,18 @@
 import React from 'react';
 // Make sure your image paths are correct in the assets folder
-import ecommerceImg from '../assets/images/ecommerce.png';
+import portfolioImg from '../assets/images/portfolio.png';
 import restaurantImg from '../assets/images/restaurant.png';
 
-// Add liveLink and codeLink to your project data
+
 const projectsData = [
   {
-    title: "Full-Stack E-commerce Website",
-    image: ecommerceImg,
-    description: "Engineered a full-stack e-commerce platform featuring product browsing, shopping cart functionality, and secure user authentication using JWT.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    liveLink: "#", // <-- Replace with your actual live demo link
-    codeLink: "#"  // <-- Replace with your actual GitHub repo link
+    title: "Portfolio",
+image: portfolioImg,
+description: "A personal portfolio website showcasing projects, skills, and experience with a clean and responsive design.",
+tags: ["React", "Bootstrap", "JavaScript", "HTML", "CSS"],
+liveLink: "#",
+codeLink: "#"
+
   },
   {
     title: "Full-Stack Restaurant Menu App",

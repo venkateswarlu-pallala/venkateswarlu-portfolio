@@ -2,7 +2,7 @@ import React from 'react';
 // Make sure your image paths are correct in the assets folder
 import portfolioImg from '../assets/images/portfolio.png';
 import restaurantImg from '../assets/images/restaurant.png';
-
+import ecommerceImg from  '../assets/images/ecommerce.png';
 
 const projectsData = [
   {

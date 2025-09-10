@@ -26,7 +26,7 @@ codeLink: "https://github.com/venkateswarlu-pallala/venkateswarlu-portfolio",
     title: "E-commerce Platform",
     image: ecommerceImg,
     description: "A full-featured e-commerce website with product listings, a shopping cart, user authentication, and a checkout process using Stripe.",
-    tags: ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe API"],
+    tags: ["React", "Redux", "Node.js", "Express", "MongoDB"],
     liveLink: "https://v-shop-website.netlify.app/", // Add your live demo link
     codeLink: "https://github.com/venkateswarlu-pallala/e-commerce-web-app", // Add your GitHub repo link
   }

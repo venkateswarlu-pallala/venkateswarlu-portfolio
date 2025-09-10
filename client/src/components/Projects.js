@@ -10,8 +10,8 @@ const projectsData = [
 image: portfolioImg,
 description: "A personal portfolio website showcasing projects, skills, and experience with a clean and responsive design.",
 tags: ["React", "Bootstrap", "JavaScript", "HTML", "CSS"],
-liveLink: "venkateswarlupallala-portfolio.netlify.app",
-
+liveLink: "https://venkateswarlupallala-portfolio.netlify.app",
+codeLink: "https://github.com/venkateswarlu-pallala/venkateswarlu-portfolio", 
 
   },
   {
@@ -20,8 +20,17 @@ liveLink: "venkateswarlupallala-portfolio.netlify.app",
     description: "Developed a dynamic SPA for users to browse a menu, filter items, and place orders, with a server-side application to manage data.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Hooks"],
     liveLink: "https://restaurant-venkateswarlu-pallalas-projects.vercel.app", 
-    
+    codeLink: "https://github.com/venkateswarlu-pallala/Restaurant", 
+  },
+   {
+    title: "E-commerce Platform",
+    image: ecommerceImg,
+    description: "A full-featured e-commerce website with product listings, a shopping cart, user authentication, and a checkout process using Stripe.",
+    tags: ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe API"],
+    liveLink: "https://v-shop-website.netlify.app/", // Add your live demo link
+    codeLink: "https://github.com/venkateswarlu-pallala/e-commerce-web-app", // Add your GitHub repo link
   }
+
 ];
 
 const Projects = () => {

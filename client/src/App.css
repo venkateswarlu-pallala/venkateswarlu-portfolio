@@ -355,7 +355,7 @@ body {
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
   background: var(--card-bg-color);
-  padding: auto;
+  padding: 10px;
   
   /* --- NEW: Smooth transition for hover effects --- */
   transition: 

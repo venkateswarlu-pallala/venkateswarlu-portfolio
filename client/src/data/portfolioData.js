@@ -79,7 +79,7 @@ export const resumeData = {
   experience: [
     {
       title: "V Care Hair & Skin Clinic - Treatment Coordinator",
-      date: "Feb 2024 – Oct 2024",
+      date: "Feb 2024 – Oct",
       location: "Nellore, India",
       description: "Coordinated client appointments and managed treatment schedules, enhancing clinic efficiency and patient satisfaction."
     }

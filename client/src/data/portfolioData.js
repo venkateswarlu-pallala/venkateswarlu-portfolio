@@ -2,7 +2,7 @@
 // Import your project images and resume PDF
 import portfolioImg from '../assets/images/ecommerce.png';
 import restaurantImg from '../assets/images/restaurant.png';
-import resumePdf from '../assets/files/PALLALA VENKATESWARLU_Frontend Developer_RESUME.pdf';
+import resumePdf from '../src/assets/files/PALLALA VENKATESWARLU_FRONTEND_DEVELOPER_RESUME.pdf';
 
 // --- HEADER DATA ---
 export const headerData = {

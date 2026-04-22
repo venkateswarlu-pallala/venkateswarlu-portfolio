@@ -2,13 +2,13 @@
 // Import your project images and resume PDF
 import portfolioImg from '../assets/images/ecommerce.png';
 import restaurantImg from '../assets/images/restaurant.png';
-import resumePdf from '../assets/files/PALLALA_VENKATESWARLU_Resume.pdf';
+import resumePdf from '../assets/files/PALLALA VENKATESWARLU_Frontend Developer_RESUME.pdf';
 
 // --- HEADER DATA ---
 export const headerData = {
   name: "Pallala Venkateswarlu",
-  title: "MERN Stack Developer",
-  description: "A passionate developer crafting modern, responsive, and scalable web applications from Nellore, India. I turn complex problems into elegant, user-friendly solutions.",
+  title: " React Frontend Developer",
+  description: "I’m a dedicated Frontend Developer specializing in building modern, responsive, and high-performance web applications using React.js, JavaScript (ES6+), HTML, and CSS. I focus on creating intuitive user interfaces and seamless user experiences with clean, maintainable code.I have hands-on experience developing dynamic applications such as e-commerce platforms and interactive web apps, where I implemented state management using Context API and integrated REST APIs efficiently.While I have basic familiarity with backend technologies like Node.js and MongoDB, my primary focus is on mastering frontend development and delivering visually appealing, user-centric applications.",
   image: '', // Assuming your profile pic is in public/images
   resumePdf: resumePdf,
 };
@@ -24,7 +24,7 @@ export const socialLinks = {
 // --- ABOUT DATA ---
 export const aboutData = {
   title: "About Me",
-  description: "Aspiring MERN Stack Developer with hands-on experience in building full-stack web applications. Proficient in developing responsive front-end interfaces with React and creating robust, scalable back-end services with Node.js, Express.js, and MongoDB. Seeking to leverage a strong foundation in JavaScript and a passion for problem-solving to contribute to a collaborative development team and build high-quality software solutions.",
+  description: "I am a passionate Frontend Developer specializing in building modern, responsive, and user-friendly web applications using React.js, JavaScript (ES6+), HTML, and CSS. I focus on creating clean and intuitive user interfaces that deliver a seamless user experience across all devices.I have hands-on experience developing dynamic applications, where I implemented efficient state management using the Context API and integrated REST APIs to handle real-time data. My approach emphasizes writing maintainable code, optimizing performance, and following best practices in frontend development.While I have basic knowledge of backend technologies like Node.js and MongoDB, my primary focus is on mastering frontend development and crafting visually appealing, high-performance web applications. I am continuously learning and improving my skills to stay updated with the latest trends in web development.",
 };
 
 // --- SKILLS DATA ---

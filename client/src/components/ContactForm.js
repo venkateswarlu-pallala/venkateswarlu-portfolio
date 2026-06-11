@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_URL =
+  process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,19 +28,27 @@ const ContactForm = () => {
     setStatus("");
 
     try {
-      await axios.post(
-        "http://localhost:5000/api/contact",
+      const response = await axios.post(
+        `${API_URL}/api/contact`,
         formData
       );
 
-      setStatus("✅ Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+      if (response.data.success) {
+        setStatus("✅ Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
     } catch (error) {
-      setStatus("❌ Failed to send message.");
+      console.error(error);
+
+      setStatus(
+        error.response?.data?.message ||
+          "❌ Failed to send message. Please try again."
+      );
     } finally {
       setIsSending(false);
     }
@@ -47,6 +58,7 @@ const ContactForm = () => {
     <section className="contact-section">
       <div className="contact-card">
         <h2>Let's Connect</h2>
+
         <p>
           Have a project, internship, or job opportunity?
           Feel free to send me a message.
@@ -55,6 +67,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
+
             <input
               type="text"
               name="name"
@@ -67,6 +80,7 @@ const ContactForm = () => {
 
           <div className="form-group">
             <label>Email</label>
+
             <input
               type="email"
               name="email"
@@ -79,6 +93,7 @@ const ContactForm = () => {
 
           <div className="form-group">
             <label>Message</label>
+
             <textarea
               name="message"
               rows="5"
@@ -106,7 +121,7 @@ const ContactForm = () => {
         {status && (
           <div
             className={`status ${
-              status.includes("successfully")
+              status.includes("success")
                 ? "success"
                 : "error"
             }`}

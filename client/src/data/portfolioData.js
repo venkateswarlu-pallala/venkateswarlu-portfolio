@@ -2,9 +2,7 @@
 // Import your project images and resume PDF
 import portfolioImg from '../assets/images/ecommerce.png';
 import restaurantImg from '../assets/images/restaurant.png';
-import resumePdf from '../assets/files/PALLALA VENKATESWARLU_FRONTEND_DEVELOPER_RESUME.pdf';
-
-/// --- HEADER DATA ---
+import resumePdf from '../assets/files/PALLALA VENKATESWARLU_FRONTEND_DEVELOPER_RESUME.pdf'
 export const headerData = {
   name: "Pallala Venkateswarlu",
   title: "Flutter Developer | Frontend Developer",

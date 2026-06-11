@@ -1,48 +1,120 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Sending...');
 
-    axios.post('http://localhost:5000/api/contact', formData)
-      .then(response => {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch(error => {
-        setStatus('Failed to send message. Please try again.');
+    setIsSending(true);
+    setStatus("");
+
+    try {
+      await axios.post(
+        "http://localhost:5000/api/contact",
+        formData
+      );
+
+      setStatus("✅ Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
       });
+    } catch (error) {
+      setStatus("❌ Failed to send message.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
-    <section className="card">
-      <h2>CONTACT ME</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
-        </div>
-        <button type="submit" className="btn-submit">Send Message</button>
-      </form>
-      {status && <p className="form-status">{status}</p>}
+    <section className="contact-section">
+      <div className="contact-card">
+        <h2>Let's Connect</h2>
+        <p>
+          Have a project, internship, or job opportunity?
+          Feel free to send me a message.
+        </p>
+
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Message</label>
+            <textarea
+              name="message"
+              rows="5"
+              maxLength="500"
+              placeholder="Type your message here..."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+
+            <small>
+              {formData.message.length}/500 characters
+            </small>
+          </div>
+
+          <button
+            type="submit"
+            className="submit-btn"
+            disabled={isSending}
+          >
+            {isSending ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        {status && (
+          <div
+            className={`status ${
+              status.includes("successfully")
+                ? "success"
+                : "error"
+            }`}
+          >
+            {status}
+          </div>
+        )}
+      </div>
     </section>
   );
 };

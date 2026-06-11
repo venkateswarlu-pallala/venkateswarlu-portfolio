@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <a href="#home">VP.</a>
+        <a href="#home">pv.</a>
       </div>
 
       {/* Main navigation links */}

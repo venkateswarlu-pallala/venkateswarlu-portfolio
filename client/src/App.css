@@ -589,26 +589,96 @@ body {
 .timeline-content .sub-heading { font-style: italic; color: var(--subtle-text-color); font-size: 0.9rem; }
 
 /* === 8. CONTACT FORM === */
-.contact-form { max-width: 700px; margin-inline: auto; }
-.contact-form :is(input, textarea) {
-  /* ADVANCED: accent-color themes form elements to your brand color with one line */
-  accent-color: var(--primary-color);
-  background: var(--card-bg-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color); 
-  border-radius: 8px;
-  transition: all var(--transition-speed) ease;
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
 }
-.contact-form :is(input:focus, textarea:focus) {
-  outline: none; border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 20%, transparent);
+
+.contact-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 35px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
-.btn-submit {
-  border-radius: 50px; background-color: var(--secondary-color);
-  border: none; padding: 12px 30px; font-weight: 600;
-  transition: all var(--transition-speed) ease;
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
 }
-.btn-submit:hover { background-color: #27ae60; transform: translateY(-3px); }
+
+.contact-card p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.submit-btn:hover {
+  background: #0056d2;
+}
+
+.submit-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+}
 
 /* === 9. FOOTER & RESPONSIVENESS === */
 .footer {

@@ -29,7 +29,8 @@ codeLink: "https://github.com/venkateswarlu-pallala/venkateswarlu-portfolio",
     tags: ["React", "Redux", "Node.js", "Express", "MongoDB"],
     liveLink: "https://v-shop-website.netlify.app/", // Add your live demo link
     codeLink: "https://github.com/venkateswarlu-pallala/e-commerce-web-app", // Add your GitHub repo link
-  }
+  },
+  
 
 ];
 
@@ -38,7 +39,9 @@ const Projects = () => {
     <section className="card">
       <h2>PROJECTS</h2>
       <div className="projects-grid">
+
         {projectsData.map((project, index) => (
+
           <div className="project-card" key={index}>
             <img src={project.image} alt={project.title} className="project-image" />
             <div className="project-overlay">
